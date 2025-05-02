@@ -14,7 +14,7 @@ require_once DIR_VIEWS . '/templates/header.php';
             </div>
 
             <?php
-            require_once DIR_VIEWS . '/templates/nav-categories.php';
+            require_once DIR_VIEWS . '/templates/nav-genres.php';
             ?>
 
             <div class="cards-small-wrapper">

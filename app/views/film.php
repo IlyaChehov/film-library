@@ -8,7 +8,7 @@ require_once DIR_VIEWS . '/templates/header.php';
         <div class="container">
 
             <?php
-            require_once DIR_VIEWS . '/templates/nav-categories.php';
+            require_once DIR_VIEWS . '/templates/nav-genres.php';
             ?>
 
             <article class="film">
