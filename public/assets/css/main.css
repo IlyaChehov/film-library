@@ -1,20 +1,20 @@
-@import './fonts/RubikMonoOne/stylesheet.css';
+@import 'fonts/RubikMonoOne/stylesheet.css';
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-@import './base/reset.css';
+@import 'base/reset.css';
 
-@import './blocks/buttons.css';
+@import 'blocks/buttons.css';
 
-@import './blocks/card-small.css';
-@import './blocks/film.css';
+@import 'blocks/card-small.css';
+@import 'blocks/film.css';
 
-@import './blocks/badge.css';
-@import './blocks/titles.css';
-@import './blocks/alerts.css';
-@import './blocks/form.css';
-@import './blocks/header.css';
-@import './blocks/categories.css';
-@import './blocks/footer.css';
+@import 'blocks/badge.css';
+@import 'blocks/titles.css';
+@import 'blocks/alerts.css';
+@import 'blocks/form.css';
+@import 'blocks/header.css';
+@import 'blocks/categories.css';
+@import 'blocks/footer.css';
 
 :root {
 	--container-width: 1000px;
