@@ -15,6 +15,8 @@
 @import 'blocks/header.css';
 @import 'blocks/categories.css';
 @import 'blocks/footer.css';
+@import 'blocks/404.css';
+
 
 :root {
 	--container-width: 1000px;

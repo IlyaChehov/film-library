@@ -13,7 +13,7 @@
     <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="../../public/assets/css/main.css"/>
-    <!-- <link rel="stylesheet" href="./css/dark-theme.css" /> -->
+    <link rel="stylesheet" href="../../public/assets/css/dark-theme.css"/>
 </head>
 
 <body>

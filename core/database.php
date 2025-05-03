@@ -1,6 +1,6 @@
 <?php
 
-function connectToDb($dbConfig): PDO
+function connectToDb(array $dbConfig): PDO
 {
     [
         'host' => $host,

@@ -10,5 +10,5 @@ if (array_key_exists($uri, $routers)
     && file_exists(DIR_CONTROLLERS . "/{$routers[$uri]}")) {
     require_once DIR_CONTROLLERS . "/{$routers[$uri]}";
 } else {
-    die('Страница не обнаружена! =(');
+    require_once DIR_VIEWS . "/404.php";
 }
