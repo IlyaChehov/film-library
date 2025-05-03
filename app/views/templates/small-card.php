@@ -1,13 +1,13 @@
 <article class="card-small">
-    <img src="../../public/assets/img/film.jpg" alt="Film" class="card-small-img"/>
+    <img src="<?= HOST ?>/public/assets/img/no-photo.png" alt="<?= $film['title'] ?>" class="card-small-img"/>
 
     <h2 class="card-small-title">
-        Властелин колец: Две крепости
+        <?= $film['title'] ?>
     </h2>
 
     <div class="card-small-badge">
-        <div class="badge">Фентези</div>
-        <div class="badge">2002</div>
+        <div class="badge"><?= $film['genre'] ?></div>
+        <div class="badge"><?= $film['year'] ?></div>
     </div>
 
     <div class="card-small-readmore">

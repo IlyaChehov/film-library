@@ -16,6 +16,6 @@ function connectToDb(array $dbConfig): PDO
         return new PDO($dsn, $username, $password, $options);
     } catch (PDOException $e) {
         error_log($e->getMessage());
-        die('Ошибка соединения с базой данных.');
+        die('Ошибка соединения с базой данных, попробуйте позже.');
     }
 }
