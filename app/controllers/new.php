@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($fields['year'])) {
         $errors['year'] = 'Введите год премьеры фильма!';
-    } elseif (empty((int)$fields['year'])) {
+    } elseif (!is_numeric($fields['year'])) {
         $errors['year'] = 'Год введен неправильно, введите целое число!';
         $fields['year'] = '';
     }

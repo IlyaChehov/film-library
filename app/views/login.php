@@ -24,5 +24,4 @@ require_once DIR_VIEWS . '/templates/header.php';
         </div>
     </main>
 
-<?php
-require_once DIR_VIEWS . '/templates/footer.php';
+<?php require_once DIR_VIEWS . '/templates/footer.php';

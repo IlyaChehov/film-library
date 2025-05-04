@@ -6,55 +6,46 @@ require_once DIR_VIEWS . '/templates/header.php';
 
     <main class="main">
         <div class="container">
-
             <h1 class="title-1 mb-20">Редактировать фильм</h1>
 
-            <?php require_once DIR_VIEWS . '/templates/card-edit.php' ?>
+            <?php if (isset($resultEditFilm)): ?>
 
-            <form action="" class="form">
+                <div class="alert-wrapper">
 
-                <label class="form__group">
-                    <p class="form__label">Название фильма</p>
-                    <input type="text" class="form__input" placeholder="Введите название фильма">
-                </label>
+                    <?php if ($resultEditFilm === true): ?>
 
-                <div class="form__row">
+                        <div class="alert alert--success">Фильм был отредактирован</div>
 
-                    <label class="form__group">
-                        <p class="form__label">Жанр</p>
-                        <select name="" id="" class="form__input form__input--select">
-                            <option value="">Выберите жанр</option>
-                            <option value="Документальный">Документальный</option>
-                            <option value="Комедия">Комедия</option>
-                            <option value="Драма">Драма</option>
-                            <option value="Детектив">Детектив</option>
-                            <option value="Фэнтези">Фэнтези</option>
-                        </select>
-                    </label>
+                    <?php elseif ($resultEditFilm === false): ?>
 
-                    <label class="form__group">
-                        <p class="form__label">Год</p>
-                        <input type="text" class="form__input" placeholder="Год премьеры">
-                    </label>
+                        <div class="alert alert--error">Ошибка редактирования фильма</div>
+
+                    <?php else: ?>
+
+                        <div class="alert alert--warning"><?= $resultEditFilm ?></div>
+
+                    <?php endif; ?>
+
                 </div>
 
-                <label class="form__group">
-                    <p class="form__label">Описание фильма</p>
-                    <textarea name="" id="" class="form__textarea" placeholder="Описание фильма"></textarea>
-                </label>
+            <?php endif;
 
-                <label class="form__group">
-                    <input type="file">
-                </label>
+            require_once DIR_VIEWS . '/templates/card-edit.php';
 
-                <div class="flex-btns-row">
-                    <a href="<?= HOST ?>" class="btn btn--secondary">Отмена</a>
-                    <button class="btn btn--edit">Сохранить</button>
+            if (!empty($errors)): ?>
+
+                <div class="alert-wrapper">
+
+                    <?php foreach ($errors as $error): ?>
+                        <div class="alert alert--error"><?= $error ?></div>
+                    <?php endforeach; ?>
+
                 </div>
-            </form>
+            <?php endif;
+
+            require_once DIR_VIEWS . '/templates/form-edit.php'; ?>
 
         </div>
     </main>
 
-<?php
-require_once DIR_VIEWS . '/templates/footer.php';
+<?php require_once DIR_VIEWS . '/templates/footer.php';

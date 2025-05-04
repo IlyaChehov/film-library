@@ -9,8 +9,7 @@ require_once DIR_VIEWS . '/templates/header.php';
 
             <?php
             require_once DIR_VIEWS . '/templates/nav-genres.php';
-            require_once DIR_VIEWS . '/templates/card.php';
-            ?>
+            require_once DIR_VIEWS . '/templates/card.php'; ?>
 
             <div class="back-wrapper">
                 <a href="<?= HOST ?>" class="btn btn--secondary">Назад</a>
@@ -30,5 +29,4 @@ require_once DIR_VIEWS . '/templates/header.php';
         </div>
     </main>
 
-<?php
-require_once DIR_VIEWS . '/templates/footer.php';
+<?php require_once DIR_VIEWS . '/templates/footer.php';

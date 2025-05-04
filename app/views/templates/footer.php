@@ -5,7 +5,6 @@
     </div>
 </footer>
 
-<script src="../../public/assets/js/main.js"></script>
+<script src="<?= HOST ?>/public/assets/js/main.js"></script>
 </body>
-
 </html>

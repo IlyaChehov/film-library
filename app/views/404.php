@@ -1,7 +1,6 @@
 <?php
 
 $title = 'Ошибка 404 | Фильмотека';
-
 require_once DIR_VIEWS . '/templates/head.php';
 require_once DIR_VIEWS . '/templates/header.php';
 ?>
@@ -22,5 +21,4 @@ require_once DIR_VIEWS . '/templates/header.php';
     </div>
 </main>
 
-<?php
-require_once DIR_VIEWS . '/templates/footer.php';
+<?php require_once DIR_VIEWS . '/templates/footer.php';
