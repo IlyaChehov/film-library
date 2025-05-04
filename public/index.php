@@ -4,6 +4,7 @@ require_once dirname(__DIR__) . '/config/constants.php';
 require_once DIR_CORE . '/helpers.php';
 require_once DIR_CORE . '/database.php';
 
+$categories = require_once DIR_CONFIG . '/categories.php';
 $dbConfig = require_once DIR_CONFIG . '/databaseConfig.php';
 $db = connectToDb($dbConfig);
 

@@ -4,7 +4,6 @@ require_once DIR_VIEWS . '/templates/head.php';
 require_once DIR_VIEWS . '/templates/header.php';
 ?>
 
-
     <main class="main">
         <div class="container">
             <!--            <div class="alert-wrapper">-->
@@ -32,8 +31,6 @@ require_once DIR_VIEWS . '/templates/header.php';
                     позже</h1>
             <?php
             endif ?>
-
-
         </div>
     </main>
 

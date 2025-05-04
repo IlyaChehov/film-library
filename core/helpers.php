@@ -12,3 +12,20 @@ function dumpDie(mixed $array): void
     dump($array);
     die;
 }
+
+function filterAllowedFields(array $data, array $allowed): array
+{
+    $fields = [];
+    foreach ($data as $k => $v) {
+        if (in_array($k, $allowed)) {
+            $fields[$k] = trim($v);
+        }
+    }
+    return $fields;
+}
+
+function showError(): void
+{
+    require_once DIR_VIEWS . "/404.php";
+    die();
+}
