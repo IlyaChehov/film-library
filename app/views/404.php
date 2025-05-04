@@ -1,5 +1,7 @@
 <?php
 
+$title = 'Ошибка 404 | Фильмотека';
+
 require_once DIR_VIEWS . '/templates/head.php';
 require_once DIR_VIEWS . '/templates/header.php';
 ?>
@@ -15,7 +17,7 @@ require_once DIR_VIEWS . '/templates/header.php';
             </div>
             <p class="error-404__text">Похоже, что страница, которую вы ищете потерялась :( <br> Возможно,
                 она была удалена, переименована или временно недоступна.</p>
-            <a href="/" class="btn error-404__btn">Вернуться на главную</a>
+            <a href="<?= HOST ?>" class="btn error-404__btn">Вернуться на главную</a>
         </section>
     </div>
 </main>

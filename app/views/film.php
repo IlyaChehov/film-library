@@ -13,7 +13,7 @@ require_once DIR_VIEWS . '/templates/header.php';
             ?>
 
             <div class="back-wrapper">
-                <a href="/" class="btn btn--secondary">Назад</a>
+                <a href="<?= HOST ?>" class="btn btn--secondary">Назад</a>
             </div>
 
             <h2 class="title-1 mb-20">Недавно смотрели</h2>

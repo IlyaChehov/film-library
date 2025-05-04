@@ -9,37 +9,7 @@ require_once DIR_VIEWS . '/templates/header.php';
 
             <h1 class="title-1 mb-20">Редактировать фильм</h1>
 
-            <article class="film">
-
-                <img src="../../public/assets/img/film.jpg" alt="Film" class="film__img"/>
-
-                <!-- Desc -->
-                <div class="film__desc">
-
-                    <h1 class="film__title">
-                        Властелин колец: Две крепости
-                    </h1>
-
-                    <div class="film__badges">
-                        <div class="badge">Фентези</div>
-                        <div class="badge">2002</div>
-                    </div>
-
-                    <div class="film__text">
-                        <p>
-                            Братство распалось, но Кольцо Всевластья должно
-                            быть уничтожено. Фродо и Сэм вынуждены
-                            довериться Голлуму, который взялся провести их к
-                            вратам Мордора. Громадная армия Сарумана
-                            приближается: члены братства и их союзники
-                            готовы принять бой. Битва за Средиземье
-                            продолжается.
-                        </p>
-                    </div>
-
-                </div>
-                <!-- // Desc -->
-            </article>
+            <?php require_once DIR_VIEWS . '/templates/card-edit.php' ?>
 
             <form action="" class="form">
 
@@ -78,7 +48,7 @@ require_once DIR_VIEWS . '/templates/header.php';
                 </label>
 
                 <div class="flex-btns-row">
-                    <a href="/" class="btn btn--secondary">Отмена</a>
+                    <a href="<?= HOST ?>" class="btn btn--secondary">Отмена</a>
                     <button class="btn btn--edit">Сохранить</button>
                 </div>
             </form>

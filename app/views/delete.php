@@ -1,5 +1,6 @@
 <?php
 
+global $film;
 require_once DIR_VIEWS . '/templates/head.php';
 require_once DIR_VIEWS . '/templates/header.php';
 ?>
@@ -9,39 +10,25 @@ require_once DIR_VIEWS . '/templates/header.php';
 
             <h1 class="title-1">Удалить фильм?</h1>
 
-            <form action="" class="form">
+            <?php
+            if (isset($isDeleteFilm)): ?>
+                <div class="alert-wrapper">
+                    <?php
+                    if ($isDeleteFilm): ?>
+                        <div class="alert alert--success">Фильм был удален</div>
+                    <?php
+                    else: ?>
+                        <div class="alert alert--error">Ошибка удаления фильма</div>
+                    <?php
+                    endif; ?>
+                </div>
+            <?php
+            endif; ?>
 
-                <article class="film">
+            <form method="post" class="form">
 
-                    <img src="../../public/assets/img/film.jpg" alt="Film" class="film__img"/>
-
-                    <!-- Desc -->
-                    <div class="film__desc">
-
-                        <h1 class="film__title">
-                            Властелин колец: Две крепости
-                        </h1>
-
-                        <div class="film__badges">
-                            <div class="badge">Фентези</div>
-                            <div class="badge">2002</div>
-                        </div>
-
-                        <div class="film__text">
-                            <p>
-                                Братство распалось, но Кольцо Всевластья должно
-                                быть уничтожено. Фродо и Сэм вынуждены
-                                довериться Голлуму, который взялся провести их к
-                                вратам Мордора. Громадная армия Сарумана
-                                приближается: члены братства и их союзники
-                                готовы принять бой. Битва за Средиземье
-                                продолжается.
-                            </p>
-                        </div>
-
-                    </div>
-                    <!-- // Desc -->
-                </article>
+                <?php
+                require_once DIR_VIEWS . '/templates/card-delete.php' ?>
 
                 <div class="back-wrapper">
                     <a href="/" class="btn">Отмена</a>

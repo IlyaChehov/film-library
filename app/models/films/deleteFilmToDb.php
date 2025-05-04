@@ -1,14 +1,19 @@
 <?php
 
-function getFilmToBd(PDO $db, string|null $id): array|false
+function deleteFilmToDb(PDO $db, int $id): bool
 {
+    $id = (int)$id ?? null;
     try {
-        $query = "SELECT * FROM `films` WHERE `id` = :id LIMIT 1";
-
+        $query = "DELETE FROM `films` WHERE `id` = :id";
         $stmt = $db->prepare($query);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
-        return $stmt->fetch();
+
+        if ($stmt->rowCount() === 0) {
+            return false;
+        }
+
+        return true;
     } catch (PDOException $e) {
         error_log($e->getMessage());
         return false;

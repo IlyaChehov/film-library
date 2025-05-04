@@ -11,11 +11,11 @@
     </div>
 
     <div class="card-small-readmore">
-        <a href="/film/views?id=<?= $film['id'] ?>" class="btn btn--secondary">Подробнее</a>
+        <a href="<?= HOST ?>/film/views?id=<?= $film['id'] ?>" class="btn btn--secondary">Подробнее</a>
     </div>
 
     <div class="card-small-admin-btns">
-        <a href="/film/edit?id=<?= $film['id'] ?>" class="btn btn--edit">Редактировать</a>
-        <a href="/film/delete?id=<?= $film['id'] ?>" class="btn btn--delete">Удалить</a>
+        <a href="<?= HOST ?>/film/edit?id=<?= $film['id'] ?>" class="btn btn--edit">Редактировать</a>
+        <a href="<?= HOST ?>/film/delete?id=<?= $film['id'] ?>" class="btn btn--delete">Удалить</a>
     </div>
 </article>

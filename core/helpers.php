@@ -26,6 +26,7 @@ function filterAllowedFields(array $data, array $allowed): array
 
 function showError(): void
 {
+    http_response_code(404);
     require_once DIR_VIEWS . "/404.php";
     die();
 }

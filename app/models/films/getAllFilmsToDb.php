@@ -1,6 +1,6 @@
 <?php
 
-function getAllFilms(PDO $db, string|null $category): array
+function getAllFilmsToDb(PDO $db, string|null $category): array
 {
     $query = $category
         ? "SELECT * FROM `films` WHERE genre = :category ORDER BY `id` DESC"

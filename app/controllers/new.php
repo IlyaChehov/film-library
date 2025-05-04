@@ -3,6 +3,8 @@
 global $db;
 require_once DIR_MODELS . '/films/addFilmToDb.php';
 
+$title = 'Добавить фильм | Фильмотека';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $allowedFields = ['title', 'genre', 'year', 'description'];
     $fields = filterAllowedFields($_POST, $allowedFields);

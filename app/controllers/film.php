@@ -10,4 +10,6 @@ if (!$film) {
     showError();
 }
 
+$title = "{$film['title']} | Фильмотека";
+
 require_once DIR_VIEWS . '/film.php';
