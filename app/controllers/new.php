@@ -1,6 +1,6 @@
 <?php
 
-global $db;
+global $db, $categories;
 require_once DIR_MODELS . '/films/addFilmToDb.php';
 
 $title = 'Добавить фильм | Фильмотека';
@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
+        $fields['genre'] = validateGenre($fields['genre'], $categories);
         $idFilm = addFilmToDb($db, $fields);
         unset($fields);
     }

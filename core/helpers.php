@@ -30,3 +30,13 @@ function showError(): void
     require_once DIR_VIEWS . "/404.php";
     die();
 }
+
+function showTextToHtml(mixed $text): string
+{
+    return $text ? htmlspecialchars($text) : '';
+}
+
+function validateGenre(string $genre, array $validGenres, string $fallback = 'Без категории')
+{
+    return in_array($genre, $validGenres) ? $genre : $fallback;
+}

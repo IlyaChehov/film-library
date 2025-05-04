@@ -1,7 +1,7 @@
 <?php
 
-global $db;
-require_once DIR_MODELS . '/films/getFilmToBd.php';
+global $db, $categories;
+require_once DIR_MODELS . '/films/getFilmToDb.php';
 require_once DIR_MODELS . '/films/editFilmToDb.php';
 
 $title = "Редактирование фильма | Фильмотека";
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             continue;
         }
 
-        if (!empty($fields[$value])) {
+        if (!empty($fields[$key])) {
             $film[$key] = $fields[$key];
         }
     }
@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
+        $fields['genre'] = validateGenre($fields['genre'], $categories);
         $resultEditFilm = editFilmToDb($db, $fields, $idFilm);
         $film = $fields;
     }

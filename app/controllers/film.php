@@ -1,7 +1,7 @@
 <?php
 
 global $db;
-require_once DIR_MODELS . '/films/getFilmToBd.php';
+require_once DIR_MODELS . '/films/getFilmToDb.php';
 $idFilm = $_GET['id'] ?? null;
 
 $film = getFilmToBd($db, $idFilm);
